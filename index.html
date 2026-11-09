@@ -3,195 +3,225 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>دليل تعبان — معلومات التطبيق والسياسات</title>
+  
+  <!-- SEO Meta Tags & Keywords -->
+  <title>تطبيق تعبان — دليل الخدمات الطبية ومقدمي الرعاية الصحية في طنطا</title>
+  <meta name="description" content="تطبيق تعبان هو دليلك المحلي الشامل للوصول إلى العيادات، المستشفيات، المعامل، والصيدليات في طنطا بسهولة. اعثر على الأقرب إليك وبيانات التواصل والعناوين بدقة." />
+  <meta name="keywords" content="دليل طبي طنطا, تطبيق تعبان, صيدليات طنطا, عيادات طنطا, دليل الخدمات الطبية, مستشفيات طنطا, M-G-S, تتبع الأماكن الطبية" />
+  <meta name="author" content="M - G - S" />
+  
+  <!-- Open Graph / Social Media Meta Tags -->
+  <meta property="og:title" content="دليل تعبان — دليل الخدمات الطبية في طنطا" />
+  <meta property="og:description" content="ابحث عن العيادات، الصيدليات، والمراكز الطبية في طنطا وتعرف على عناوينها ومواعيد عملها بكل سهولة." />
+  <meta property="og:type" content="website" />
+
   <style>
+    :root {
+      --primary: #0d9488;
+      --primary-dark: #0f766e;
+      --primary-light: #f0fdfa;
+      --accent: #14b8a6;
+      --text-main: #0f172a;
+      --text-muted: #475569;
+      --bg-body: #f8fafc;
+      --border-color: #ccfbf1;
+      --card-bg: #ffffff;
+    }
+
     * { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
-      font-family: 'Segoe UI', Tahoma, Arial, sans-serif;
-      background: #f0fdfa;
-      color: #0f172a;
-      line-height: 1.75;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: var(--bg-body);
+      color: var(--text-main);
+      line-height: 1.8;
       direction: rtl;
     }
 
-    /* ===== HERO ===== */
+    /* ===== HERO SECTION ===== */
     .hero {
-      background: linear-gradient(150deg, #5eead4 0%, #0d9488 55%, #0f766e 100%);
-      padding: 56px 24px 52px;
+      background: linear-gradient(145deg, #2dd4bf 0%, #0d9488 50%, #115e59 100%);
+      padding: 70px 20px 60px;
       text-align: center;
       color: #fff;
+      position: relative;
+      overflow: hidden;
     }
     .hero-icon {
-      width: 110px;
-      height: 110px;
-      border-radius: 28px;
+      width: 120px;
+      height: 120px;
+      border-radius: 30px;
       overflow: hidden;
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      margin: 0 auto 22px;
+      margin: 0 auto 20px;
       background: rgba(255,255,255,0.15);
-      border: 2.5px solid rgba(255,255,255,0.35);
-      box-shadow: 0 8px 32px rgba(0,0,0,0.22);
+      border: 3px solid rgba(255,255,255,0.4);
+      box-shadow: 0 12px 35px rgba(0,0,0,0.25);
     }
     .hero-icon img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      border-radius: 24px;
+      border-radius: 26px;
     }
     .hero h1 {
-      font-size: 2.1rem;
+      font-size: 2.3rem;
       font-weight: 900;
       letter-spacing: 0.5px;
-      margin-bottom: 10px;
+      margin-bottom: 12px;
     }
     .hero p {
-      font-size: 1rem;
-      opacity: 0.88;
-      max-width: 500px;
+      font-size: 1.05rem;
+      opacity: 0.9;
+      max-width: 600px;
       margin: 0 auto;
     }
     .badge {
       display: inline-block;
-      background: rgba(255,255,255,0.22);
-      border: 1px solid rgba(255,255,255,0.35);
+      background: rgba(255,255,255,0.25);
+      border: 1px solid rgba(255,255,255,0.4);
       border-radius: 20px;
-      padding: 5px 16px;
-      font-size: 0.83rem;
+      padding: 6px 18px;
+      font-size: 0.85rem;
       font-weight: 700;
-      margin-top: 16px;
+      margin-top: 18px;
+      backdrop-filter: blur(5px);
     }
 
-    /* ===== CONTAINER ===== */
+    /* ===== CONTAINER & NAVIGATION ===== */
     .container {
-      max-width: 820px;
-      margin: 0 auto;
-      padding: 44px 20px 80px;
+      max-width: 900px;
+      margin: -30px auto 0;
+      padding: 0 20px 80px;
+      position: relative;
+      z-index: 10;
     }
 
-    /* ===== NAV TABS ===== */
-    .tabs {
+    .nav-tabs {
       display: flex;
       gap: 10px;
       flex-wrap: wrap;
-      margin-bottom: 38px;
+      margin-bottom: 35px;
       justify-content: center;
     }
     .tab-btn {
-      background: #fff;
-      border: 1.5px solid #ccfbf1;
-      border-radius: 12px;
-      padding: 10px 22px;
-      font-size: 0.9rem;
+      background: var(--card-bg);
+      border: 1.5px solid var(--border-color);
+      border-radius: 14px;
+      padding: 12px 24px;
+      font-size: 0.93rem;
       font-weight: 700;
-      color: #0d9488;
+      color: var(--primary);
       cursor: pointer;
-      transition: all 0.2s;
+      box-shadow: 0 4px 15px rgba(13,148,136,0.06);
+      transition: all 0.25s ease;
       text-decoration: none;
     }
     .tab-btn:hover {
-      background: #0d9488;
+      background: var(--primary);
       color: #fff;
-      border-color: #0d9488;
+      border-color: var(--primary);
+      transform: translateY(-2px);
     }
 
-    /* ===== SECTION ===== */
+    /* ===== SECTION STYLING ===== */
     .section {
-      background: #fff;
-      border-radius: 22px;
-      border: 1.5px solid #ccfbf1;
-      box-shadow: 0 4px 28px rgba(13,148,136,0.08), 0 1px 6px rgba(0,0,0,0.04);
-      padding: 34px 30px;
-      margin-bottom: 24px;
+      background: var(--card-bg);
+      border-radius: 24px;
+      border: 1.5px solid var(--border-color);
+      box-shadow: 0 10px 30px rgba(13,148,136,0.06);
+      padding: 40px 35px;
+      margin-bottom: 30px;
     }
     .section-header {
       display: flex;
       align-items: center;
-      gap: 14px;
-      margin-bottom: 24px;
-      padding-bottom: 18px;
-      border-bottom: 1.5px solid #f0fdfa;
+      gap: 15px;
+      margin-bottom: 25px;
+      padding-bottom: 20px;
+      border-bottom: 2px solid var(--primary-light);
     }
     .section-icon {
-      width: 50px;
-      height: 50px;
-      border-radius: 14px;
+      width: 52px;
+      height: 52px;
+      border-radius: 16px;
       display: flex;
       align-items: center;
       justify-content: center;
       font-size: 24px;
       flex-shrink: 0;
     }
-    .icon-teal   { background: #f0fdfa; }
+    .icon-teal   { background: var(--primary-light); }
     .icon-blue   { background: #eff6ff; }
     .icon-purple { background: #f5f3ff; }
     .icon-green  { background: #f0fdf4; }
 
     .section-header h2 {
-      font-size: 1.2rem;
+      font-size: 1.35rem;
       font-weight: 800;
-      color: #0f172a;
+      color: var(--text-main);
     }
 
     .section p {
-      font-size: 0.97rem;
-      color: #334155;
-      margin-bottom: 14px;
+      font-size: 1rem;
+      color: var(--text-muted);
+      margin-bottom: 16px;
     }
     .section p:last-child { margin-bottom: 0; }
 
     /* ===== INFO GRID ===== */
     .info-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 12px;
-      margin-top: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+      margin-top: 25px;
     }
     .info-card {
       background: #f8fafc;
-      border-radius: 14px;
-      padding: 16px 18px;
+      border-radius: 16px;
+      padding: 18px 20px;
       border: 1px solid #e2e8f0;
     }
     .info-card .label {
-      font-size: 0.76rem;
+      font-size: 0.78rem;
       color: #94a3b8;
       font-weight: 700;
-      margin-bottom: 5px;
+      margin-bottom: 6px;
+      text-transform: uppercase;
     }
     .info-card .value {
-      font-size: 0.93rem;
+      font-size: 0.95rem;
       font-weight: 700;
-      color: #0f172a;
+      color: var(--text-main);
       word-break: break-all;
     }
 
-    /* ===== NUMBERED LIST ===== */
+    /* ===== POLICY LIST ===== */
     .policy-list {
       list-style: none;
       padding: 0;
     }
     .policy-list li {
       display: flex;
-      gap: 14px;
+      gap: 16px;
       align-items: flex-start;
-      padding: 16px 0;
+      padding: 18px 0;
       border-bottom: 1px solid #f1f5f9;
-      font-size: 0.95rem;
-      color: #334155;
-      line-height: 1.8;
+      font-size: 0.98rem;
+      color: var(--text-muted);
+      line-height: 1.85;
     }
     .policy-list li:last-child { border-bottom: none; padding-bottom: 0; }
     .list-num {
-      min-width: 32px;
-      height: 32px;
-      background: #f0fdfa;
-      color: #0d9488;
-      border-radius: 9px;
+      min-width: 34px;
+      height: 34px;
+      background: var(--primary-light);
+      color: var(--primary);
+      border-radius: 10px;
       font-weight: 800;
-      font-size: 0.85rem;
+      font-size: 0.88rem;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -199,45 +229,60 @@
       margin-top: 2px;
     }
 
+    /* ===== HIGHLIGHT BOX (Data Deletion & Retention) ===== */
+    .highlight-box {
+      background: #f0fdfa;
+      border: 1.5px dashed var(--primary);
+      border-radius: 16px;
+      padding: 20px;
+      margin-top: 20px;
+    }
+    .highlight-box h3 {
+      font-size: 1.05rem;
+      color: var(--primary-dark);
+      margin-bottom: 8px;
+      font-weight: 800;
+    }
+
     /* ===== CONTACT BUTTONS ===== */
     .contact-row {
       display: flex;
-      gap: 12px;
+      gap: 14px;
       flex-wrap: wrap;
-      margin-top: 22px;
+      margin-top: 25px;
     }
     .contact-btn {
       display: inline-flex;
       align-items: center;
-      gap: 9px;
-      padding: 12px 24px;
-      border-radius: 13px;
-      font-size: 0.92rem;
+      gap: 10px;
+      padding: 14px 26px;
+      border-radius: 14px;
+      font-size: 0.95rem;
       font-weight: 700;
       text-decoration: none;
-      transition: opacity 0.2s, transform 0.15s;
+      transition: all 0.2s ease;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
     }
-    .contact-btn:hover { opacity: 0.85; transform: translateY(-1px); }
-    .btn-teal  { background: #0d9488; color: #fff; }
+    .contact-btn:hover { opacity: 0.9; transform: translateY(-2px); }
+    .btn-teal  { background: var(--primary); color: #fff; }
     .btn-green { background: #16a34a; color: #fff; }
     .btn-blue  { background: #2563eb; color: #fff; }
 
     /* ===== FOOTER ===== */
     footer {
       text-align: center;
-      padding: 32px 20px;
+      padding: 40px 20px;
       color: #94a3b8;
-      font-size: 0.82rem;
+      font-size: 0.88rem;
       border-top: 1px solid #e2e8f0;
-      margin-top: 20px;
+      margin-top: 30px;
+      background: #fff;
     }
 
-    @media (max-width: 600px) {
-      .hero h1 { font-size: 1.6rem; }
-      .hero-icon { width: 90px; height: 90px; border-radius: 22px; }
-      .section { padding: 22px 18px; }
-      .tabs { gap: 8px; }
-      .tab-btn { padding: 8px 14px; font-size: 0.82rem; }
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 1.8rem; }
+      .hero-icon { width: 100px; height: 100px; border-radius: 24px; }
+      .section { padding: 25px 20px; }
       .contact-row { flex-direction: column; }
       .contact-btn { justify-content: center; }
     }
@@ -245,50 +290,50 @@
 </head>
 <body>
 
-<!-- ===== HERO ===== -->
-<div class="hero">
+<!-- ===== HERO HEADER ===== -->
+<header class="hero">
   <div class="hero-icon">
-    <img src="assets/icon.png" alt="أيقونة دليل تعبان" />
+    <img src="assets/icon.png" alt="أيقونة تطبيق دليل تعبان الطبي" />
   </div>
-  <h1>دليل تعبان</h1>
-  <p>دليلك الطبي الشامل للخدمات الصحية في منطقتك</p>
-  <span class="badge">الإصدار 1.0.0</span>
-</div>
+  <h1>تطبيق دليل تعبان</h1>
+  <p>دليلك المحلي الموثوق للوصول إلى مقدمي الخدمات الطبية، العيادات، الصيدليات، والمراكز الصحية في طنطا بكل سهولة وسرعة.</p>
+  <span class="badge">الإصدار 1.0.0 — متوافق مع معايير الأمان وجوجل بلاي</span>
+</header>
 
-<!-- ===== TABS ===== -->
-<div class="container">
-  <div class="tabs">
-    <a href="#about"   class="tab-btn">عن التطبيق</a>
-    <a href="#privacy" class="tab-btn">سياسة الخصوصية</a>
-    <a href="#terms"   class="tab-btn">شروط الاستخدام</a>
-    <a href="#contact" class="tab-btn">تواصل معنا</a>
-  </div>
+<!-- ===== MAIN CONTENT CONTAINER ===== -->
+<main class="container">
 
-  <!-- ===== ABOUT ===== -->
-  <div class="section" id="about">
+  <!-- NAVIGATION TABS -->
+  <nav class="tabs nav-tabs">
+    <a href="#about" class="tab-btn">عن التطبيق</a>
+    <a href="#privacy" class="tab-btn">سياسة الخصوصية وحذف البيانات</a>
+    <a href="#terms" class="tab-btn">شروط الاستخدام</a>
+    <a href="#contact" class="tab-btn">اتصل بالمطور</a>
+  </nav>
+
+  <!-- ===== ABOUT SECTION ===== -->
+  <section class="section" id="about">
     <div class="section-header">
       <div class="section-icon icon-blue">ℹ️</div>
-      <h2>عن التطبيق</h2>
+      <h2>عن تطبيق تعبان (Ta'ban Directory)</h2>
     </div>
     <p>
-      <strong>تعبان | دليل تعبان</strong> هو تطبيق رقمي للخدمات الطبية يساعد المستخدمين
-      في الوصول إلى العيادات ومراكز الأشعة والمعامل والصيدليات بسرعة وسهولة.
+      <strong>تعبان | دليل تعبان</strong> هو تطبيق خدمي محلي مبتكر مصمم خصيصاً لمساعدة أهالي مدينة طنطا في العثور السريع على العيادات الطبية، معامل التحاليل، مراكز الأشعة، والصيدليات في مختلف المناطق.
     </p>
     <p>
-      التطبيق يقدّم خدمة عرض وإرشاد فقط، ولا يقدّم حجز مواعيد أو استشارات
-      أو تشخيصاً أو علاجاً طبياً.
+      يعمل التطبيق كدليل معلوماتي جغرافي بحت يتيح للمستخدمين استعراض العناوين، أرقام الهواتف، مواعيد العمل، والمواقع على الخرائط، دون تقديم أي خدمات تشخيصية أو استشارات طبية مباشرة.
     </p>
     <div class="info-grid">
       <div class="info-card">
-        <div class="label">الإصدار</div>
-        <div class="value">1.0.0</div>
+        <div class="label">إصدار التطبيق</div>
+        <div class="value">1.0.0 (Production)</div>
       </div>
       <div class="info-card">
-        <div class="label">المطوّر</div>
+        <div class="label">المطور والبرمجة</div>
         <div class="value">M - G - S</div>
       </div>
       <div class="info-card">
-        <div class="label">الهاتف</div>
+        <div class="label">رقم الهاتف الرسمي</div>
         <div class="value">01062186746</div>
       </div>
       <div class="info-card">
@@ -296,159 +341,117 @@
         <div class="value">abomalak666666666666@gmail.com</div>
       </div>
     </div>
-  </div>
+  </section>
 
-  <!-- ===== PRIVACY ===== -->
-  <div class="section" id="privacy">
+  <!-- ===== PRIVACY POLICY SECTION ===== -->
+  <section class="section" id="privacy">
     <div class="section-header">
       <div class="section-icon icon-teal">🛡️</div>
-      <h2>سياسة الخصوصية</h2>
+      <h2>سياسة الخصوصية وبيانات المستخدم</h2>
     </div>
     <ul class="policy-list">
       <li>
         <div class="list-num">١</div>
         <div>
           <strong>البيانات التي يتم جمعها</strong><br>
-          لا يتم إنشاء حساب ولا نجمع بيانات شخصية مباشرة من المستخدم، كما تُحفظ بيانات المفضلة والإعدادات محلياً على جهازك فقط.
+          لا يتطلب التطبيق إنشاء حساب شخصي إلزامي. يتم حفظ التفضيلات وقائمة المفضلة محلياً على ذاكرة جهازك لضمان أعلى مستويات الخصوصية.
         </div>
       </li>
       <li>
         <div class="list-num">٢</div>
         <div>
-          <strong>استخدام البيانات</strong><br>
-          تُستخدم البيانات لعرض الخدمات الطبية داخل التطبيق وتحسين تجربة الاستخدام وتشغيل خدمة "الأقرب ليك".
+          <strong>استخدام الموقع الجغرافي (Location)</strong><br>
+          يتم طلب إذن الوصول إلى موقعك الجغرافي فقط عند تفعيل خاصية "الأقرب إليك" لعرض المنشآت الطبية القريبة منك، ولا يتم تخزين موقعك أو تتبعه بشكل دائم على خوادم خارجية.
         </div>
       </li>
       <li>
         <div class="list-num">٣</div>
         <div>
-          <strong>الموقع الجغرافي</strong><br>
-          يتم طلب إذن الموقع فقط عند استخدام خاصية "الأقرب ليك"، ولا يتم تخزين موقعك بشكل دائم أو مشاركته مع أي طرف ثالث.
+          <strong>مشاركة البيانات مع أطراف ثالثة</strong><br>
+          نحن نلتزم بالحفاظ على خصوصيتك؛ فلا يتم بيع أو مشاركة أي بيانات تخص المستخدم مع أي جهات تجارية أو إعلانية خارجية بأي شكل من الأشكال.
         </div>
       </li>
       <li>
         <div class="list-num">٤</div>
         <div>
-          <strong>مشاركة البيانات</strong><br>
-          لا يتم بيع أو مشاركة بيانات المستخدم مع أي طرف ثالث لأغراض تجارية أو إعلانية.
-        </div>
-      </li>
-      <li>
-        <div class="list-num">٥</div>
-        <div>
-          <strong>الأمان</strong><br>
-          تُشفَّر الاتصالات مع الخادم باستخدام HTTPS ونطبق إجراءات حماية مناسبة، مع الإقرار أنه لا يمكن ضمان الأمان التقني بنسبة 100%.
-        </div>
-      </li>
-      <li>
-        <div class="list-num">٦</div>
-        <div>
-          <strong>موافقة المستخدم</strong><br>
-          باستخدام التطبيق فإنك توافق على سياسة الخصوصية وشروط الاستخدام.
-        </div>
-      </li>
-      <li>
-        <div class="list-num">٧</div>
-        <div>
-          <strong>التواصل بشأن الخصوصية</strong><br>
-          لأي استفسار يتعلق بخصوصيتك تواصل معنا:
-          <a href="mailto:abomalak666666666666@gmail.com">abomalak666666666666@gmail.com</a>
+          <strong>أمان وحماية البيانات</strong><br>
+          تُشفَّر كافة الاتصالات بين التطبيق والخوادم باستخدام بروتوكولات الأمان القياسية (HTTPS)، مع تطبيق المعايير التقنية لحماية البيانات من الاستخدام غير المصرح به.
         </div>
       </li>
     </ul>
-  </div>
 
-  <!-- ===== TERMS ===== -->
-  <div class="section" id="terms">
+    <!-- Highlighted Box specifically addressing Google Play Data Deletion requirement -->
+    <div class="highlight-box">
+      <h3>🗑️ مدة الاحتفاظ بالبيانات وكيفية حذفها:</h3>
+      <p>
+        نحتفظ بالبيانات الأساسية التي يشاركها المستخدم (كالتفضيلات والمفضلات المحفوظة) طالما أن التطبيق قيد الاستخدام على جهازك. يحق للمستخدم في أي وقت طلب حذف بياناته أو مسح كافة السجلات تماماً من خلال إلغاء تثبيت التطبيق (Uninstall) أو التواصل معنا عبر البريد الإلكتروني المذكور أعلاه ليتم مسح أي بيانات مرتبطة فوراً خلال مدة زمنية قصيرة.
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== TERMS OF USE SECTION ===== -->
+  <section class="section" id="terms">
     <div class="section-header">
       <div class="section-icon icon-purple">⚖️</div>
-      <h2>شروط الاستخدام</h2>
+      <h2>شروط الاستخدام وإخلاء المسؤولية</h2>
     </div>
     <ul class="policy-list">
       <li>
         <div class="list-num">١</div>
         <div>
-          <strong>التعريف بالتطبيق</strong><br>
-          تطبيق "تعبان | دليل تعبان" هو دليل رقمي يساعد المستخدمين في الوصول إلى مقدمي الخدمات الطبية بسهولة وسرعة.
+          <strong>طبيعة الخدمة الإرشادية</strong><br>
+          تطبيق "تعبان" هو دليل رقمي محلي لعرض البيانات والروابط الإرشادية فقط، ولا يُعد منصة طبية أو علاجية ولا يقدم أي حجوزات أو استشارات أو تشخيصات طبية.
         </div>
       </li>
       <li>
         <div class="list-num">٢</div>
         <div>
-          <strong>طبيعة الخدمة</strong><br>
-          التطبيق يعمل كدليل لعرض البيانات فقط، ولا يقوم بالحجز أو إدارة المواعيد أو تقديم أي خدمة طبية مباشرة.
+          <strong>مسؤولية المستخدم</strong><br>
+          المستخدم هو المسؤول الوحيد عن اختيار مقدم الخدمة الطبية المناسب له، ويتم أي تعامل أو تواصل مباشر بين المستخدم وجهة تقديم الخدمة خارج مسؤولية إدارة التطبيق تماماً.
         </div>
       </li>
       <li>
         <div class="list-num">٣</div>
         <div>
-          <strong>مسؤولية المستخدم</strong><br>
-          المستخدم مسؤول عن اختيار مقدم الخدمة المناسب، وأي تواصل بينه وبين مقدم الخدمة يتم خارج مسؤولية التطبيق.
+          <strong>دقة وموثوقية المعلومات</strong><br>
+          تُعرض البيانات والأسعار وأوقات العمل بناءً على ما يقدمه مزودو الخدمات والأماكن العامة، ونبذل قصارى جهدنا لمراجعتها وتحديثها بشكل دوري.
         </div>
       </li>
       <li>
         <div class="list-num">٤</div>
         <div>
-          <strong>دقة المعلومات</strong><br>
-          تُعرض البيانات كما يقدّمها أصحاب الخدمات، ولا نضمن دقة أو تحديث جميع المعلومات بشكل دائم.
-        </div>
-      </li>
-      <li>
-        <div class="list-num">٥</div>
-        <div>
-          <strong>الاستخدام المقبول</strong><br>
-          يجب استخدام التطبيق بشكل قانوني، ويُحظر إساءة استخدامه أو محاولة اختراقه أو تعطيله بأي شكل.
-        </div>
-      </li>
-      <li>
-        <div class="list-num">٦</div>
-        <div>
-          <strong>التعديلات</strong><br>
-          يحق لإدارة التطبيق تعديل هذه الشروط في أي وقت دون إشعار مسبق.
-        </div>
-      </li>
-      <li>
-        <div class="list-num">٧</div>
-        <div>
-          <strong>إنهاء الاستخدام</strong><br>
-          يحق لإدارة التطبيق إيقاف أو حظر أي مستخدم يخالف هذه الشروط.
-        </div>
-      </li>
-      <li>
-        <div class="list-num">٨</div>
-        <div>
-          <strong>إخلاء المسؤولية الطبية</strong><br>
-          التطبيق ليس جهة طبية ولا يقدم استشارات أو تشخيصاً أو علاجاً. جميع المعلومات لأغراض إرشادية فقط، ويجب استشارة طبيب مختص قبل اتخاذ أي قرار طبي.
+          <strong>إخلاء المسؤولية الطبية التام</strong><br>
+          جميع المعلومات المعروضة في التطبيق هي لأغراض الإرشاد الجغرافي والمكاني فقط، ويجب دائماً استشارة طبيب مختص وحيل موثوقة قبل اتخاذ أي قرار صحي أو علاجي.
         </div>
       </li>
     </ul>
-  </div>
+  </section>
 
-  <!-- ===== CONTACT ===== -->
-  <div class="section" id="contact">
+  <!-- ===== CONTACT SECTION ===== -->
+  <section class="section" id="contact">
     <div class="section-header">
       <div class="section-icon icon-green">📞</div>
-      <h2>تواصل معنا</h2>
+      <h2>تواصل مع المطور</h2>
     </div>
-    <p>نحن هنا لمساعدتك في أي استفسار أو اقتراح أو مشكلة تواجهها. لا تتردد في التواصل معنا.</p>
+    <p>نحن نرحب دائماً بملاحظاتكم، اقتراحاتكم، أو أي استفسارات بخصوص تفعيل المنشآت الطبية أو سياسة الاستخدام. فريق الدعم الفني جاهز لمساعدتكم.</p>
     <div class="contact-row">
       <a href="tel:01062186746" class="contact-btn btn-teal">
-        📞 اتصل بنا
+        📞 اتصال هاتفي مباشر
       </a>
       <a href="https://wa.me/201062186746" class="contact-btn btn-green">
-        💬 واتساب
+        💬 مراسلة عبر واتساب
       </a>
       <a href="mailto:abomalak666666666666@gmail.com" class="contact-btn btn-blue">
         ✉️ البريد الإلكتروني
       </a>
     </div>
-  </div>
+  </section>
 
-</div>
+</main>
 
 <!-- ===== FOOTER ===== -->
 <footer>
-  جميع الحقوق محفوظة &copy; 2025 دليل تعبان &nbsp;|&nbsp; تطوير: M - G - S
+  جميع الحقوق محفوظة &copy; 2026 تطبيق دليل تعبان (Ta'ban App) &nbsp;|&nbsp; تصميم وتطوير: M - G - S
 </footer>
 
 </body>
