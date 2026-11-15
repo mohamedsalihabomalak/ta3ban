@@ -1,2 +1,2 @@
-# ta3ban
-Privacy Policy for Ta3ban Medical App
+# دليل طنطا الطبي
+Privacy Policy for Tanta Medical Guide
